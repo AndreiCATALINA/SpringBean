@@ -2,5 +2,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-<bean id="emailService" class="org.example.service.EmailService"></bean>
+    <bean id="emailService" class="org.example.service.EmailService"></bean>
+
+    <bean id="depart" class="org.example.autowiring.Department">
+        <property name="departmentName" value="IT"></property>
+    </bean>
+
+    <bean id="emp" class="org.example.autowiring.Employee" autowire="byName"/>
 </beans>
